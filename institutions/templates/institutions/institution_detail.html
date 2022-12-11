@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h1>{{ object.institution_name }}</h1>
+    <dl class="row">
+        <dt class="col-sm-3">Code:</dt>
+        <dd class="col-sm-9">{{ object.code }}</dd>
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-3">Type:</dt>
+        <dd class="col-sm-9">{{ object.type }}</dd>
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-3">District:</dt>
+        <dd class="col-sm-9">{{ object.district }}</dd>
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-3">MOH Area:</dt>
+        <dd class="col-sm-9">{{ object.moh_area }}</dd>
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-3">Polling Division:</dt>
+        <dd class="col-sm-9">{{ object.polling_divition }}</dd>
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-3">Sinhala Name:</dt>
+        <dd class="col-sm-9">{{ object.sinhala_name }}</dd>
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-3">Tel No:</dt>
+        <dd class="col-sm-9">{{ object.tel_no }}</dd>
+        </dd>
+    </dl>
+    <dl class="row">
+        <dt class="col-sm-3">Address:</dt>
+        <dd class="col-sm-9">{{ object.address }}</dd>
+        </dd>
+    </dl>
+    <a class="btn btn-primary" href={% url 'insti-update' object.pk %} role="button">Edit</a>
+</div>
+{% endblock content %}

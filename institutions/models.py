@@ -1,5 +1,6 @@
 # Create your models here.
 from django.db import models
+from django.urls import reverse
 
 
 class Insti(models.Model):
@@ -82,3 +83,6 @@ class Institution(models.Model):
 
     def __str__(self):
         return str(self.institution_name)
+
+    def get_absolute_url(self):
+        return reverse('insti-detail', kwargs={'pk': self.pk})

@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'wagtail.search',
     'wagtail.admin',
     'wagtail.core',
-
+    'crispy_forms',
+    'crispy_bootstrap5',
     'modelcluster',
     'taggit',
 
@@ -162,3 +163,6 @@ WAGTAIL_SITE_NAME = "pu"
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
 WAGTAILADMIN_BASE_URL = 'http://example.com'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"

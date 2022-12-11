@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static crispy_forms_tags %}
+{% block content %}
+
+
+<form method="post">{% csrf_token %}
+    <div class="container">
+        {% comment %} {% crispy form %} {% endcomment %}
+        <div class="row">
+            <div class="col-6">
+                {{ form.institution_name|as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{ form.district|as_crispy_field }}
+            </div>
+            <div class="col-3">
+                {{ form.tel_no|as_crispy_field }}
+            </div>
+            <div class="col-6">
+                {{ form.type|as_crispy_field }}
+            </div>
+            <div class="col-6">
+                {{ form.moh_area|as_crispy_field }}
+            </div>
+            <div class="col-6">
+                {{ form.sinhala_name|as_crispy_field }}
+            </div>
+            <div class="col-6">
+                {{ form.polling_divition|as_crispy_field }}
+            </div>
+            <div class="col-12">
+                {{ form.address|as_crispy_field }}
+            </div>
+        </div>
+        <input class="btn btn-success" type="submit" value="Update">
+</form>
+</div>
+{% endblock content %}
